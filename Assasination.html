@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The greatest assasination</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<h2>The greatest assassination</h2>
+		<p><b>Rulles:</b> before you start your assassination <strong>click on the canvas</strong> in place where you want your king to be born. Then <strong>type</strong> in your fill percentage of citizens in text field and press <strong>"new kingdom button"</strong>. Now you can start your simulation by pressing <strong>"START the great assassination"</strong> button.</p>
+		<p>Killer moves toward the King and he has 2 hp. Each time killer reaches a citizen he loses one health (color is showing killer hp: green=2; red=1). When killer loses all hp he dies and new killer is born on the map (in random spot). The simulation stops after killer reaches the King (kills him). Each day killer makes his move on his to kill the king. Below the canvas it is shown how many days king is rulling and how many assassination attemps have been made.</p>
+		<p>Symbols: <b style="color: red;">$</b> - KING;  <b>*</b> - citizen; <b style="color: green;">K</b> - killer.</p>   
+		<p>Fill Percentage of citizens in your kingdom: <input type="text" id="inputPercent">
+		  <input type="button" value="New kingdom" id="fillButton" onclick="clickFillButton()">
+	  </p>
+		<canvas id="canvas" style="border-style: solid" width="1000" height="500"></canvas>
+    <h3 id="generation">Days of reign of the king: 0</h3>
+		<p>Simulation Speed <select id="speed">
+			                    <option value=100>Fast</option>
+								<option value=500>Medium</option>
+								<option value=1000>Slow</option>
+								<option value=2000>Slow Mo</option>
+		                    </select>
+		  	<input type="button" value=" START the great assassination " id="startButton" onclick="clickStartButton()">
+			<input type="button" value=" STOP assassination " id="stopButton" onclick="clickStopButton()">
+			<input type="button" value=" RESET " id="resetButton" onclick="clickResetButton()">
+		</p>
+	</body>
+
+	<script src="assasination.js" defer>
+	</script>
+</html>
